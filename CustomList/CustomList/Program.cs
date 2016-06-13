@@ -20,6 +20,7 @@ namespace CustomList
                 makelist.AddItem(listitem2);
                 makelist.ViewList();
                 Console.ReadKey();
+                makelist.SwapListValues();
             }
         }
     }

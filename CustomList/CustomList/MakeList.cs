@@ -8,8 +8,8 @@ namespace CustomList
 {
     class MakeList<T>
     {
-        public T[] collection = new T[10];
         int index = 0;
+        public T[] collection = new T[1];
 
         public MakeList()
         {
@@ -26,6 +26,19 @@ namespace CustomList
         {
             Console.WriteLine("[{0}]", string.Join(", ", collection));
         }
+
+        public void SwapListValues()
+        {
+            T[]tempvalue = new T[index];
+            tempvalue = collection;
+            collection = new T[index + 1];
+            int count = 0;
+            foreach (T item in tempvalue)
+            {
+                collection[count] = item;
+                count++;
+            }
+    }
     }
 }
 
